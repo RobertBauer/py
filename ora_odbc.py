@@ -9,9 +9,12 @@ cursor.execute("INSERT INTO EMP (EMPNO, ENAME, JOB, MGR) VALUES (535, 'Robert', 
 cursor = cnxn.cursor()	
 cursor.execute("SELECT * FROM EMP") 
 row = cursor.fetchone() 
+
 while row:
     print (row) 
     row = cursor.fetchone()
+
 cursor.close()
+
 cnxn.close()
 
