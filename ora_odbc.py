@@ -5,6 +5,7 @@ cnxn = pyodbc.connect('DRIVER={Oracle in OraClient12Home1};DBQ=192.168.0.14:1521
 
 cursor = cnxn.cursor()
 cursor.execute("INSERT INTO EMP (EMPNO, ENAME, JOB, MGR) VALUES (535, 'Robert', 'Manager', 545)") 
+cnxn.commit()
 
 cursor = cnxn.cursor()	
 cursor.execute("SELECT * FROM EMP") 
